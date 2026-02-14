@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | JK Paints - Premium Automotive Paints & Accessories</title>
+    <meta name="description" content="Browse our complete range of premium automotive paints, thinners, primers, hardeners, and finishing products.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        .product-filters {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-group h5 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .filter-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .filter-list li {
+            margin-bottom: 8px;
+        }
+        
+        .filter-list a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-list a:hover,
+        .filter-list a.active {
+            color: var(--primary);
+            background-color: rgba(255, 179, 0, 0.1);
+        }
+        
+        .filter-list a i {
+            margin-right: 8px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .filter-list a.active i {
+            opacity: 1;
+        }
+        
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .products-count {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        .sort-options {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sort-options label {
+            font-size: 14px;
+            color: var(--text-light);
+            margin: 0;
+        }
+        
+        .sort-options select {
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 14px;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+        
+        .pagination {
+            margin-top: 40px;
+            justify-content: center;
+        }
+        
+        .page-link {
+            color: var(--secondary);
+            border: 1px solid var(--border-color);
+            margin: 0 2px;
+        }
+        
+        .page-link:hover {
+            background-color: var(--primary);
+            color: var(--secondary);
+            border-color: var(--primary);
+        }
+        
+        .page-item.active .page-link {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-contact">
+                        <a href="tel:+911234567890"><i class="fas fa-phone"></i> +91 1234 567890</a>
+                        <a href="mailto:info@jkpaints.com"><i class="fas fa-envelope"></i> info@jkpaints.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="https://wa.me/911234567890" class="btn-whatsapp-top"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="#quote-form" class="btn-get-quote">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-logo">JK</span>
+                <span class="brand-name">JK Paints</span>
+                <span class="brand-tagline">Powering Automotive Perfection</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Category Navbar -->
+    <nav class="navbar navbar-expand-lg category-navbar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoryNav">
+                <span class="navbar-toggler-icon"></span> Browse Categories
+            </button>
+            
+            <div class="collapse navbar-collapse" id="categoryNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fas fa-car"></i> Car Paints
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Auto Silver Automotive Paint</a></li>
+                            <li><a class="dropdown-item" href="#">ASPA Automotive Paint</a></li>
+                            <li><a class="dropdown-item" href="#">RPI Supreme Automotive Paint</a></li>
+                            <li><a class="dropdown-item" href="#">Rallision Top Coat</a></li>
+                            <li><a class="dropdown-item" href="#">Vanto NC Black</a></li>
+                            <li><a class="dropdown-item" href="#">Duxone Tint DXT213</a></li>
+                            <li><a class="dropdown-item" href="#">SPC Roy Paint</a></li>
+                            <li><a class="dropdown-item" href="#">High Coal Premium</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fas fa-tint"></i> Paint Thinner
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">PPG Bilux Universal</a></li>
+                            <li><a class="dropdown-item" href="#">Nexa Autocolor ZK</a></li>
+                            <li><a class="dropdown-item" href="#">Nippon NAX 2K</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fas fa-brush"></i> Primers & Hardeners
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Plastic Primer</a></li>
+                            <li><a class="dropdown-item" href="#">PU Hardener</a></li>
+                            <li><a class="dropdown-item" href="#">Anti Corrosion Coating</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fas fa-sparkles"></i> Finishing Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Scratch Remover</a></li>
+                            <li><a class="dropdown-item" href="#">Car Wax</a></li>
+                            <li><a class="dropdown-item" href="#">Paint Finisher</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fas fa-tools"></i> Surface Preparation
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Sand Paper</a></li>
+                            <li><a class="dropdown-item" href="#">Masking Tape</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Hero -->
+    <section class="hero-section" style="background: linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(40, 40, 40, 0.8) 100%); padding: 100px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title">Our Products</h1>
+                    <p class="hero-text">Premium automotive paints and accessories for professionals. Browse our complete range of high-quality products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!-- Filters Sidebar -->
+                <div class="col-lg-3">
+                    <div class="product-filters">
+                        <div class="filter-group">
+                            <h5>Categories</h5>
+                            <ul class="filter-list">
+                                <li><a href="#" class="filter-category active" data-category="all"><i class="fas fa-check"></i> All Products</a></li>
+                                <li><a href="#" class="filter-category" data-category="paint"><i class="fas fa-check"></i> Car Paints</a></li>
+                                <li><a href="#" class="filter-category" data-category="thinner"><i class="fas fa-check"></i> Paint Thinner</a></li>
+                                <li><a href="#" class="filter-category" data-category="primer"><i class="fas fa-check"></i> Primers & Hardeners</a></li>
+                                <li><a href="#" class="filter-category" data-category="finishing"><i class="fas fa-check"></i> Finishing Products</a></li>
+                                <li><a href="#" class="filter-category" data-category="surface"><i class="fas fa-check"></i> Surface Preparation</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Price Range</h5>
+                            <ul class="filter-list">
+                                <li><a href="#" class="filter-price active" data-price="all"><i class="fas fa-check"></i> All Prices</a></li>
+                                <li><a href="#" class="filter-price" data-price="under-1000"><i class="fas fa-check"></i> Under ₹1,000</a></li>
+                                <li><a href="#" class="filter-price" data-price="1000-2000"><i class="fas fa-check"></i> ₹1,000 - ₹2,000</a></li>
+                                <li><a href="#" class="filter-price" data-price="2000-3000"><i class="fas fa-check"></i> ₹2,000 - ₹3,000</a></li>
+                                <li><a href="#" class="filter-price" data-price="above-3000"><i class="fas fa-check"></i> Above ₹3,000</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h5>Popular Tags</h5>
+                            <div class="tags">
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2">Bestseller</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2">Premium</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2">Durable</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2">Weather Resistant</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2">High Gloss</a>
+                                <a href="#" class="badge bg-light text-dark me-2 mb-2">Fast Drying</a>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="downloads.html" class="btn btn-outline-primary w-100">
+                                <i class="fas fa-download"></i> Download Catalog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Products Grid -->
+                <div class="col-lg-9">
+                    <div class="products-header">
+                        <div class="products-count">
+                            Showing <span id="product-count">24</span> products
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-products">Sort by:</label>
+                            <select id="sort-products">
+                                <option value="default">Default</option>
+                                <option value="price-low-high">Price: Low to High</option>
+                                <option value="price-high-low">Price: High to Low</option>
+                                <option value="name-a-z">Name: A to Z</option>
+                                <option value="name-z-a">Name: Z to A</option>
+                                <option value="popularity">Popularity</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row products-container">
+                        <!-- Product 1 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="paint" data-price="2499">
+                            <div class="product-card">
+                                <div class="product-badge">Bestseller</div>
+                                <div class="product-image">
+                                    <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 200px;"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Auto Silver Automotive Paint</h4>
+                                    <p class="product-desc">Premium metallic finish with UV protection</p>
+                                    <div class="product-price">
+                                        <span class="current">₹2,499</span>
+                                        <span class="original">₹2,999</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="btn-quick-view">Quick View</button>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 2 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="thinner" data-price="899">
+                            <div class="product-card">
+                                <div class="product-badge">Popular</div>
+                                <div class="product-image">
+                                    <div style="background: linear-gradient(135deg, #f093fb, #f5576c); height: 200px;"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">PPG Bilux Universal Thinner</h4>
+                                    <p class="product-desc">High-performance paint thinner</p>
+                                    <div class="product-price">
+                                        <span class="current">₹899</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="btn-quick-view">Quick View</button>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 3 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="paint" data-price="3199">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); height: 200px;"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">RPI Supreme Automotive Paint</h4>
+                                    <p class="product-desc">Professional-grade top coat</p>
+                                    <div class="product-price">
+                                        <span class="current">₹3,199</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="btn-quick-view">Quick View</button>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 4 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="thinner" data-price="1099">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div style="background: linear-gradient(135deg, #43e97b, #38f9d7); height: 200px;"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Nexa Autocolor ZK Thinner</h4>
+                                    <p class="product-desc">Advanced thinner formula</p>
+                                    <div class="product-price">
+                                        <span class="current">₹1,099</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="btn-quick-view">Quick View</button>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 5 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="paint" data-price="2899">
+                            <div class="product-card">
+                                <div class="product-badge">New</div>
+                                <div class="product-image">
+                                    <div style="background: linear-gradient(135deg, #fa709a, #fee140); height: 200px;"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Rallision Top Coat</h4>
+                                    <p class="product-desc">Premium finishing coat</p>
+                                    <div class="product-price">
+                                        <span class="current">₹2,899</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="btn-quick-view">Quick View</button>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 6 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="paint" data-price="2699">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div style="background: linear-gradient(135deg, #2c3e50, #4a6491); height: 200px;"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Vanto NC Black Paint</h4>
+                                    <p class="product-desc">Deep black finish</p>
+                                    <div class="product-price">
+                                        <span class="current">₹2,699</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="btn-quick-view">Quick View</button>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 7 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="primer" data-price="1499">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 200px;"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Plastic Primer</h4>
+                                    <p class="product-desc">Adhesion promoter for plastic surfaces</p>
+                                    <div class="product-price">
+                                        <span class="current">₹1,499</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="btn-quick-view">Quick View</button>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 8 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="primer" data-price="1299">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div style="background: linear-gradient(135deg, #f093fb, #f5576c); height: 200px;"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">PU Hardener</h4>
+                                    <p class="product-desc">Polyurethane hardener for 2K systems</p>
+                                    <div class="product-price">
+                                        <span class="current">₹1,299</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="btn-quick-view">Quick View</button>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 9 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="finishing" data-price="799">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); height: 200px;"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Scratch Remover</h4>
+                                    <p class="product-desc">Professional scratch removal compound</p>
+                                    <div class="product-price">
+                                        <span class="current">₹799</span>
+                                    </div>
+                                    <div class="product-actions">
+                                        <button class="btn-quick-view">Quick View</button>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="section lead-section" id="quote-form">
+        <div class="container">
+            <div class="lead-capture">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2>Need a Custom Quote?</h2>
+                        <p>Fill out the form to get special pricing for bulk orders and dealer inquiries. Our sales team will contact you within 24 hours.</p>
+                        <ul class="lead-benefits">
+                            <li><i class="fas fa-check-circle"></i> Custom pricing for volume orders</li>
+                            <li><i class="fas fa-check-circle"></i> Priority technical support</li>
+                            <li><i class="fas fa-check-circle"></i> Faster delivery options</li>
+                            <li><i class="fas fa-check-circle"></i> Dealer benefits & marketing support</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <form class="lead-form" id="products-quote-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="Company Name">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control" required>
+                                    <option value="">Select Product Interest</option>
+                                    <option>Auto Silver Automotive Paint</option>
+                                    <option>PPG Bilux Universal Thinner</option>
+                                    <option>RPI Supreme Automotive Paint</option>
+                                    <option>Nexa Autocolor ZK Thinner</option>
+                                    <option>Multiple Products</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Your Message / Requirements"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">Get Pricing Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <h3>JK Paints</h3>
+                        <p class="tagline">Powering Automotive Perfection</p>
+                        <p>Premium automotive paints and accessories trusted by professionals worldwide since 2010.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Car Paints</a></li>
+                        <li><a href="products.html">Paint Thinner</a></li>
+                        <li><a href="products.html">Primers</a></li>
+                        <li><a href="products.html">Finishing Products</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Noida, Uttar Pradesh</li>
+                        <li><i class="fas fa-phone"></i> +91 1234 567890</li>
+                        <li><i class="fas fa-envelope"></i> info@jkpaints.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM-7PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2023 JK Paints. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <p>Designed for Automotive Professionals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/911234567890?text=Hello%20JK%20Paints,%20I%20want%20details%20about%20your%20products" class="float-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Sticky Call Button -->
+    <a href="tel:+911234567890" class="float-call">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    
+    <script>
+        // Initialize products page functionality
+        $(document).ready(function() {
+            // Filter functionality
+            $('.filter-category').click(function(e) {
+                e.preventDefault();
+                
+                // Update active filter
+                $('.filter-category').removeClass('active');
+                $(this).addClass('active');
+                
+                // Update product count (simulated)
+                $('#product-count').text('24');
+            });
+            
+            $('.filter-price').click(function(e) {
+                e.preventDefault();
+                
+                // Update active filter
+                $('.filter-price').removeClass('active');
+                $(this).addClass('active');
+                
+                // Update product count (simulated)
+                $('#product-count').text('18');
+            });
+            
+            // Sort functionality
+            $('#sort-products').change(function() {
+                alert('Products sorted by: ' + $(this).val());
+            });
+            
+            // Quote form submission
+            $('#products-quote-form').submit(function(e) {
+                e.preventDefault();
+                alert('Thank you! Your quote request has been submitted. We will contact you within 24 hours.');
+                $(this)[0].reset();
+            });
+            
+            // Back to top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('.back-to-top').addClass('show');
+                } else {
+                    $('.back-to-top').removeClass('show');
+                }
+            });
+            
+            $('.back-to-top').click(function() {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+/* JK Paints - Responsive Styles */
+
+/* Extra large devices */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .category-navbar .nav-link {
+        font-size: 15px;
+    }
+}
+
+/* Large devices */
+@media (max-width: 1199px) {
+    .navbar-nav .nav-link {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .hero-title {
+        font-size: 40px;
+    }
+    
+    .ai-hero-placeholder {
+        height: 350px;
+    }
+    
+    .category-navbar .nav-link {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Medium devices */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--secondary);
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        margin-top: 10px;
+    }
+    
+    .category-navbar {
+        display: none;
+    }
+    
+    .hero-section {
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 28px;
+    }
+    
+    .parallax-section {
+        padding: 80px 0;
+    }
+    
+    .parallax-content h2 {
+        font-size: 28px;
+    }
+    
+    .lead-capture {
+        padding: 40px 30px;
+    }
+    
+    .carousel-section {
+        padding: 60px 0;
+    }
+}
+
+/* Small devices */
+@media (max-width: 767px) {
+    .top-bar {
+        font-size: 12px;
+        padding: 8px 0;
+        text-align: center;
+    }
+    
+    .top-contact a {
+        display: inline-block;
+        margin: 0 8px 5px;
+    }
+    
+    .col-md-6.text-end {
+        text-align: center !important;
+        margin-top: 10px;
+    }
+    
+    .navbar-brand {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .brand-logo {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    
+    .brand-name {
+        font-size: 16px;
+        margin-top: 0;
+    }
+    
+    .brand-tagline {
+        display: none;
+    }
+    
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-text {
+        font-size: 16px;
+    }
+    
+    .ai-hero-placeholder {
+        height: 250px;
+        margin-top: 30px;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .hero-buttons .btn:last-child {
+        margin-bottom: 0;
+    }
+    
+    .trust-item {
+        margin-bottom: 20px;
+    }
+    
+    .trust-item h3 {
+        font-size: 28px;
+    }
+    
+    .category-card, .industry-card, .feature-card, .testimonial-card, .step-card {
+        margin-bottom: 20px;
+    }
+    
+    .product-card {
+        margin-bottom: 30px;
+    }
+    
+    .gallery-item {
+        margin-bottom: 20px;
+    }
+    
+    .comparison-table {
+        margin: 0 -15px;
+    }
+    
+    .carousel-item {
+        min-width: 250px;
+    }
+    
+    .carousel-section {
+        padding: 40px 0;
+    }
+    
+    .bestseller-carousel {
+        padding: 0 20px;
+    }
+    
+    .float-whatsapp, .float-call, .back-to-top {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .float-call {
+        bottom: 80px;
+    }
+    
+    .back-to-top {
+        bottom: 140px;
+        font-size: 18px;
+    }
+    
+    .distributor-invitation h2 {
+        font-size: 24px;
+    }
+    
+    .distributor-invitation p {
+        font-size: 16px;
+    }
+    
+    .catalog-banner {
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .col-md-4.text-end {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+    
+    .footer-section {
+        padding: 50px 0 20px;
+    }
+    
+    .footer-section > .container > .row > div {
+        margin-bottom: 30px;
+    }
+    
+    .contact-buttons .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 575px) {
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .btn-hero {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+    }
+    
+    .section-header p {
+        font-size: 16px;
+    }
+    
+    .parallax-content h2 {
+        font-size: 24px;
+    }
+    
+    .parallax-content p {
+        font-size: 16px;
+    }
+    
+    .certification-item {
+        margin-bottom: 20px;
+    }
+    
+    .map-placeholder, .video-placeholder {
+        height: 200px;
+    }
+    
+    .lead-form .form-control {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    
+    .btn-submit {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .footer-bottom .row > div {
+        text-align: center !important;
+    }
+    
+    .footer-bottom p {
+        margin-bottom: 10px;
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .carousel-item {
+        min-width: 220px;
+        padding: 15px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .top-bar,
+    .main-navbar,
+    .category-navbar,
+    .float-whatsapp,
+    .float-call,
+    .back-to-top,
+    .hero-buttons,
+    .product-actions,
+    .btn-catalog,
+    .btn-distributor,
+    .lead-form,
+    .social-icons,
+    .newsletter,
+    .footer-section {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: white !important;
+    }
+    
+    .section {
+        padding: 20px 0 !important;
+        page-break-inside: avoid;
+    }
+    
+    a {
+        color: #000 !important;
+        text-decoration: underline;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
